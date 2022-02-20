@@ -1,0 +1,20 @@
+body {
+    background-color: lightgray;
+}
+
+.flexContainer {
+    display: flex;
+    margin-left: 600px;
+    margin-top: 200px;
+}
+.container {
+    /* display: flex;
+    gap: 10px;
+    flex-wrap:wrap;
+    column-count: 16; */
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+}
+.same {
+    border: 5px solid red;
+}
