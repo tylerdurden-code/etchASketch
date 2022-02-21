@@ -14,7 +14,13 @@ body {
     column-count: 16; */
     display: grid;
     grid-template-columns: repeat(16,1fr);
+    width: 400px;
+    height: 400px;
 }
 .same {
     border: 5px solid red;
+}
+
+#blackSame {
+    background-color: black;
 }
