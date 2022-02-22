@@ -1,3 +1,7 @@
+:root {
+    --joke:repeat(16,1fr);
+}
+
 body {
     background-color: lightgray;
 }
@@ -13,9 +17,10 @@ body {
     flex-wrap:wrap;
     column-count: 16; */
     display: grid;
-    grid-template-columns: repeat(16,1fr);
+    grid-template-columns: var(--joke);
     width: 400px;
     height: 400px;
+    background-color: white;
 }
 .same {
     border: 5px solid red;
@@ -23,4 +28,7 @@ body {
 
 #blackSame {
     background-color: black;
+}
+#whitesame {
+    background-color: white;
 }
