@@ -1,3 +1,12 @@
+function generateRandomColor(){
+    let maxVal = 0xFFFFFF; // 16777215
+    let randomNumber = Math.random() * maxVal; 
+    randomNumber = Math.floor(randomNumber);
+    randomNumber = randomNumber.toString(16);
+    let randColor = randomNumber.padStart(6, 0);   
+    return `#${randColor.toUpperCase()}`
+}
+
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
@@ -30,13 +39,13 @@ function divArray(num) { // makes a num length array with div iterations inside 
 
 
 
-
+const same = document.querySelectorAll('.same')
 const clearBtn = document.getElementById('clear')
 const container = document.querySelector('.container');
 const applyBtn = document.getElementById('apply')
 var r = document.querySelector(':root')
 
-divArray(16)
+divArray(8)
 
 applyBtn.addEventListener('click',function() {
     divArray(slider.value);
@@ -52,13 +61,31 @@ clearBtn.addEventListener('click',function(e) { // makes the background of the d
     
 })
 var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+var output = document.getElementById("display");
 output.innerHTML = slider.value + "x" + slider.value ; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
   output.innerHTML = this.value + "x" + this.value;
 } 
+
+var toggled = false;
+function toggle() {
+    if (!toggled) {
+        toggled=true;
+        for (i =0; i < same.length; i++) {
+            same[i].addEventListener('mouseover',function(e) {
+                same[i].style.backgroundColor = 'organge';
+            })
+        }
+        return;
+    }
+    if (toggled) {
+        toggled = false;
+        console.log('OFF')
+        return;
+    }
+}
 
 
 
