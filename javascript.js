@@ -43,6 +43,7 @@ const same = document.querySelectorAll('.same')
 const clearBtn = document.getElementById('clear')
 const container = document.querySelector('.container');
 const applyBtn = document.getElementById('apply')
+const colorInput = document.getElementById('colorWheel')
 var r = document.querySelector(':root')
 
 divArray(8)
@@ -73,20 +74,31 @@ var toggled = false;
 function toggle() {
     if (!toggled) {
         toggled=true;
-        for (i =0; i < same.length; i++) {
-            same[i].addEventListener('mouseover',function(e) {
-                same[i].style.backgroundColor = 'organge';
+        for (i =0; i < container.childElementCount; i++) {
+            container.children[i].addEventListener('mouseover',function(e) {
+                e.target.style.backgroundColor = generateRandomColor();
             })
         }
         return;
     }
     if (toggled) {
         toggled = false;
-        console.log('OFF')
+        for (i =0; i < container.childElementCount; i++) {
+            container.children[i].addEventListener('mouseover',function(e) {
+                e.target.style.backgroundColor = 'black';
+            })
+        }
         return;
     }
 }
-
+colorInput.addEventListener('input', () => {
+    let color = colorInput.value;
+    for (i =0; i < container.childElementCount; i++) {
+        container.children[i].addEventListener('mouseover',function(e) {
+            e.target.style.backgroundColor = color;
+        })
+    }
+})
 
 
 

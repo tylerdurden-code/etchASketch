@@ -11,7 +11,6 @@ body {
     justify-content: space-around;
     width: fit-content;
     margin: auto;
-    border: 5px solid green;
     flex-shrink: 0;
 }
 .container {
@@ -25,9 +24,9 @@ body {
     height: 400px;
     background-color: white;
     flex-shrink: 0;
+    border: 2px solid black;
 }
 .same {
-    border: 5px solid red;
 }
 
 #blackSame {
@@ -39,7 +38,6 @@ body {
 #title {
     display: flex;
     justify-content: center;
-    border: 5px solid green;
     font-family: "Arial Black", sans-serif;
     font-size: 4.5em;
     letter-spacing: -1px;
@@ -47,13 +45,12 @@ body {
 }
 .meter {
     display: flex;
-    border: 5px solid green;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    margin-top: 10px;
 }
 .bad {
     display: flex;
-    border: 5px solid green;
     justify-content: center;
 }
 #apply {
@@ -94,4 +91,6 @@ body {
 .toggle {
     display: flex;
     justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
