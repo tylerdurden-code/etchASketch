@@ -85,14 +85,14 @@ function toggle() {
         toggled = false;
         for (i =0; i < container.childElementCount; i++) {
             container.children[i].addEventListener('mouseover',function(e) {
-                e.target.style.backgroundColor = 'black';
+                e.target.style.backgroundColor = colorInput.value;
             })
         }
         return;
     }
 }
 colorInput.addEventListener('input', () => {
-    let color = colorInput.value;
+    var color = colorInput.value;
     for (i =0; i < container.childElementCount; i++) {
         container.children[i].addEventListener('mouseover',function(e) {
             e.target.style.backgroundColor = color;

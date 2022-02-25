@@ -1,16 +1,25 @@
 :root {
     --joke:repeat(16,1fr);
 }
-
+html {
+    height: 100%;
+}
 body {
     background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;    height: 100%;
 }
-
+.flexFlexContainer {
+    display: flex;
+    justify-content: center;
+}
 .flexContainer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     width: fit-content;
-    margin: auto;
+    margin-top: auto;
     flex-shrink: 0;
 }
 .container {
@@ -25,9 +34,11 @@ body {
     background-color: white;
     flex-shrink: 0;
     border: 2px solid black;
+
 }
-.same {
-}
+/* .same {
+
+} */
 
 #blackSame {
     background-color: black;
@@ -42,12 +53,13 @@ body {
     font-size: 4.5em;
     letter-spacing: -1px;
     color: red;
+
 }
 .meter {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 0;
 }
 .bad {
     display: flex;
@@ -92,5 +104,14 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
+    flex: 0;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: auto;
+    background-color: darkgrey;
+    padding: 15px;    
 }
